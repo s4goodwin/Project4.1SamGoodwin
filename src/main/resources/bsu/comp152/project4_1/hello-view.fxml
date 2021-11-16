@@ -21,7 +21,27 @@
                      <Font name="System Bold" size="20.0" />
                   </font>
                </Label>
-               <TextField />
+               <TextField fx:id="PriceField" />
+            </children>
+         </HBox>
+         <HBox layoutX="174.0" layoutY="106.0" prefHeight="115.0" prefWidth="298.0">
+            <children>
+               <Label text="Type">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="TypeField" />
+            </children>
+         </HBox>
+         <HBox layoutX="174.0" layoutY="221.0" prefHeight="143.0" prefWidth="298.0">
+            <children>
+               <Label text="Name">
+                  <font>
+                     <Font name="System Bold" size="20.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="NameField" />
             </children>
          </HBox>
       </children>
