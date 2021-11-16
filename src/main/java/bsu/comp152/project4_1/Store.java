@@ -1,3 +1,5 @@
+package bsu.comp152.project4_1;
+
 import javax.imageio.IIOException;
 import java.io.IOException;
 import java.nio.file.Files;

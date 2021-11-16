@@ -1,4 +1,4 @@
-
+package bsu.comp152.project4_1;
 
 /**
  * Class ShippingAddress

@@ -1,3 +1,5 @@
+package bsu.comp152.project4_1;
+
 import java.util.ArrayList;
 
 public class BusinessCustomer extends Customer{

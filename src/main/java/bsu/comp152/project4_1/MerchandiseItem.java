@@ -1,3 +1,5 @@
+package bsu.comp152.project4_1;
+
 public class MerchandiseItem {
     private ItemType taxibleType;
     private String Name;
