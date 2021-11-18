@@ -1,5 +1,7 @@
 package bsu.comp152.project4_1;
 
+import java.util.ArrayList;
+
 public class MerchandiseItem {
     private ItemType taxibleType;
     private String Name;
@@ -23,4 +25,6 @@ public class MerchandiseItem {
     public ItemType getTaxibleType(){
         return taxibleType;
     }
+
+
 }

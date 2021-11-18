@@ -1,14 +1,10 @@
 package bsu.comp152.project4_1;
 
-import javax.imageio.IIOException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Class Store
@@ -21,7 +17,7 @@ public class Store {
 
   private ArrayList<Order> Orders;
   private ArrayList<Customer> Customers;
-  private ArrayList<MerchandiseItem> Stock;
+  public ArrayList<MerchandiseItem> Stock;
   private double revenue;
   
   //

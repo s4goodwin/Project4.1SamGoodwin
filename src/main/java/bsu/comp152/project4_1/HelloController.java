@@ -1,5 +1,7 @@
 package bsu.comp152.project4_1;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -11,9 +13,8 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import java.util.jar.Attributes;
 
-public class HelloController implements Initializable {
+public class HelloController extends Store implements Initializable {
     @FXML
     private Label welcomeText;
 
@@ -25,17 +26,17 @@ public class HelloController implements Initializable {
     private TextField NameField;
     @FXML
     private ListView<MerchandiseItem> ListStock;
-    private MerchandiseItem Stock;
+    private ArrayList<MerchandiseItem> Stock;
 
     public HelloController(){
         super();
     }
 
     public void loadData(){
-        var stockList=new Store();
-        ArrayList<MerchandiseItem> List=stockList.getStock();
+        ArrayList<MerchandiseItem> stockList=Stock;
+        stockList=new ArrayList<MerchandiseItem>(getStock());
         ObservableList<MerchandiseItem> dataToShow=
-                FXCollections.observableArrayList(List);
+                FXCollections.observableArrayList(stockList);
         ListStock.setItems(dataToShow);
 
     }
@@ -47,6 +48,15 @@ public class HelloController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadData();
+        ListStock.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<MerchandiseItem>() {
+            @Override
+            public void changed(ObservableValue<? extends MerchandiseItem> observableValue, MerchandiseItem merchandiseItem, MerchandiseItem t1) {
+                PriceField.setText(String.valueOf(t1.getPrice()));
+                TypeField.setText(String.valueOf(t1.getTaxibleType()));
+                NameField.setText(t1.getName());
+            }
+        });
 
     }
 }
