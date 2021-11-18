@@ -340,5 +340,9 @@ public class Store {
     System.out.print("Enter the number of your choice:");
   }
 
+  public ArrayList<MerchandiseItem> getStock(){
+    return Stock;
+  }
+
 
 }

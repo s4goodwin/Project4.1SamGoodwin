@@ -11,6 +11,7 @@ public class MerchandiseItem {
         taxibleType = type;
     }
 
+
     public String getName(){
         return Name;
     }
